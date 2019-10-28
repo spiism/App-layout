@@ -1,0 +1,33 @@
+// @flow
+import React, { Component } from 'react'
+
+import {{properCase name}}View from './{{properCase name }}View'
+
+type Props = {
+  navigation: any
+}
+
+class {{properCase name}}Container extends Component<Props> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      state1: undefined
+    }
+  }
+
+  onButtonPress = () => {
+    this.props.navigation.navigate('Home')
+  }
+
+  render() {
+    return (
+      <{{properCase name}}View
+        {...this.props}
+        {...this.state}
+        onButtonPress={this.onButtonPress}
+      />
+    )
+  }
+}
+
+export default {{properCase name}}Container
