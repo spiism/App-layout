@@ -45,13 +45,13 @@ export default class App extends Component {
           <Button onPress={this.timepicker} title="Show time picker!" />
         </View>
         { show && (
-          <DateTimePicker value={date}
-                          mode={mode}
-                          is24Hour
-                          display="default"
-                          onChange={this.setDate}
-          />
-        )}
+        <DateTimePicker value={date}
+          mode={mode}
+          is24Hour
+          display="default"
+          onChange={this.setDate}
+        />
+)}
       </View>
     );
   }

@@ -16,16 +16,12 @@ export default class BookingsView extends Component {
         justifyContent: 'space-between',
         alignItems: 'stretch',
       }}>
-        <View style={{height: 150, backgroundColor: 'green'}}>
-          <Text>Ride requests</Text>
-        </View>
-        <View style={{height: 150, backgroundColor: 'green'}} >
-          <Text>Book rides</Text>
-        </View>
-
-        <View style={{height: 150, backgroundColor: 'green'}} >
-          <Text>Journey tracker</Text>
-        </View>
+        <View style={{height: 150, backgroundColor: 'green'}} />
+        <Text>Ride requests</Text>
+        <View style={{height: 150, backgroundColor: 'green'}} />
+        <Text>Book rides</Text>
+        <View style={{height: 150, backgroundColor: 'green'}} />
+        <Text>Journey tracker</Text>
       </View>
     );
   }
