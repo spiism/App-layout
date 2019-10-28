@@ -1,58 +1,36 @@
-import React, { Component } from 'react';
-import { View, Button, Platform } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
+// @flow
+import React, { Component } from 'react'
+import { StyleSheet, View, Text, Button,Alert, } from 'react-native';
 
-export default class App extends Component {
-  state = {
-    date: new Date('2020-06-12T14:42:42'),
-    mode: 'date',
-    show: false,
-  }
+function Separator() {
+  return <View style={styles.separator} />;
+}
 
-  setDate = (event, date) => {
-    date = date || this.state.date;
 
-    this.setState({
-      show: Platform.OS === 'ios',
-      date,
-    });
-  }
-
-  show = mode => {
-    this.setState({
-      show: true,
-      mode,
-    });
-  }
-
-  datepicker = () => {
-    this.show('date');
-  }
-
-  timepicker = () => {
-    this.show('time');
-  }
-
+export default class BookingsView extends Component {
   render() {
-    const { show, date, mode } = this.state;
-
     return (
-      <View>
-        <View>
-          <Button onPress={this.datepicker} title="Show date picker!" />
-        </View>
-        <View>
-          <Button onPress={this.timepicker} title="Show time picker!" />
-        </View>
-        { show && (
-        <DateTimePicker value={date}
-          mode={mode}
-          is24Hour
-          display="default"
-          onChange={this.setDate}
-        />
-)}
+      <View style={{
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'stretch',
+      }}>
+        <View style={{height: 150, backgroundColor: 'green'}} />
+        <Text>Ride requests</Text>
+        <View style={{height: 150, backgroundColor: 'green'}} />
+        <Text>Book rides</Text>
+        <View style={{height: 150, backgroundColor: 'green'}} />
+        <Text>Journey tracker</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+})
